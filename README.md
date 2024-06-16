@@ -42,12 +42,11 @@ data
 
 The data folder is broken into three root folders. The `raw/` folder should be untouched data separated into sub-folders. Each sub-folder should contain a `README.md` with details of how the data was accessed. Once the raw data is cleaned/processed, it will output into `base/`. Then, combining the datasets will end up in `derived/`.
 
-> [!TIP]
-> If you are using large datasets that do not work with normal git commits, here's my strategy:
-> 1. Put the `data/` folder in cloud storage and then create a symlink to this project folder (h/t [Santiago Hermo](https://github.com/santiagohermo))
->    
->    This would look like `ln -s ~/Dropbox/Project/data/ ~/project_path/data/`.
-> 2. Add *only* the large datasets to `.gitignore` so that you never commit them. You should document well how to download the data in `raw`; potentially including a script to do so.
+If you are using large datasets that do not work with normal git commits, here's my strategy:
+1. Put the `data/` folder in cloud storage and then create a symlink to this project folder (h/t [Santiago Hermo](https://github.com/santiagohermo))
+   
+   This would look like `ln -s ~/Dropbox/Project/data/ ~/project_path/data/`.
+2. Add *only* the large datasets to `.gitignore` so that you never commit them. You should document well how to download the data in `raw`; potentially including a script to do so.
 
 
 
