@@ -87,6 +87,12 @@ The logbook creates an quarto website with rendered output of all code used in `
 
 Github actions can be setup to automatically publish `logbook/` via github pages. See `.github/workflows/publish_logbook.yml` which updates the lobook everytime a commit is pushed. Note this *does not* run `main.R`, so logbook is only up to date if you rerun everything before committing.
 
+- To initialize, you need to run (only one time). 
+  ```
+  cd logbook/
+  quarto publish gh-pages/
+  ``` 
+
 
 
 ## Tags and Releases
