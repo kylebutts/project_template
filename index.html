@@ -222,6 +222,11 @@ ul.task-list li input[type="checkbox"] {
     └── toggle-code.html</code></pre>
 <p>The logbook creates an quarto website with rendered output of all code used in <code>main.R</code>. This makes collaboration easy, as you can view all output of scripts in the logbook. Also ensures replicability. See <a href="https://github.com/kylebutts/repro_project"><code>kylebutts/repro_project</code></a> for details.</p>
 <p>Github actions can be setup to automatically publish <code>logbook/</code> via github pages. See <code>.github/workflows/publish_logbook.yml</code> which updates the lobook everytime a commit is pushed. Note this <em>does not</em> run <code>main.R</code>, so logbook is only up to date if you rerun everything before committing.</p>
+<ul>
+<li><p>To initialize, you need to run (only one time).</p>
+<pre><code>cd logbook/
+quarto publish gh-pages/</code></pre></li>
+</ul>
 </section>
 </section>
 <section id="tags-and-releases" class="level2">
