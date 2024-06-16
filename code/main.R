@@ -7,6 +7,6 @@ library(here)
 source(here("logbook/render_file.R"))
 
 # Render files if needed
-# 1 && render_file(here("file.R"))
+1 && render_file(here("code/example/example.R"))
 
 
