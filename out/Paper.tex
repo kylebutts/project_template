@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{paper,math}
+\addbibresource{references.bib}
+
+\title{Example Paper\thanks{\acknlowledgements}}
+\author{
+  Author One%
+  \thanks{School. Email: \href{mailto:email@gmail.com}{email@gmail.com}.} 
+  \ and 
+  Author Two%
+  \thanks{School. Email: \href{mailto:email@gmail.com}{email@gmail.com}.}
+}
+\date{\textsc{\today}}
+\def\acknlowledgements{%
+  Acknlowedgements
+}
+
+% Conditionally display thoughts (hide by switching to `\boolfalse`)
+\booltrue{INCLUDECOMMENTS}
+\newcommand{\kyle}[1]{\coauthorComment[Kyle]{#1}}
+
+\begin{document}
+
+% Title Page -------------------------------------------------------------------
+\maketitle
+% \begin{abstract}
+%   ...
+% 
+%   \par~\par\noindent
+%   {\color{asher}JEL-Classification:} ...
+%   \par\noindent
+%   {\color{asher}Keywords:} ...
+%   \par\vspace{-2.5mm}
+% \end{abstract}
+% 
+% \newpage
+
+
+
+
+
+
+
+
+
+% ------------------------------------------------------------------------------
+\newpage
+\printbibliography
+% ------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------
+\newpage
+\appendix
+% ------------------------------------------------------------------------------
+
+
+\end{document}
