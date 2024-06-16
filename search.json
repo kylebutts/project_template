@@ -1,0 +1,88 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Research Project Template",
+    "section": "",
+    "text": "This is a template repository that will serve as a base for research projects in the future. I’ve spent a lot of time working on my process and I think it’s a recipe for success. You should consider using this.\n\n\n\n\n.\n├── README.md\n├── .nojekyll\n└── .gitignore\nThe base directory contains a README that shows up on the front page of the Github repository. A template is included at the bottom of the readme I include links to the pdf, the abstract, .bib citation, and detail the replication process.\nThe .gitignore prevents you from comitting a lot of files that are useless (e.g. latex auxiliary files). .nojekyll is for publishing logbook/ with github pages.\n\n\n\ncode\n├── folder/\n├── utils/\n└── main.R\nAll code goes into the code/ folder. The main.R script runs all the analysis using render_file which will create logs in to the logbook/. Remember that folders are your friend (e.g. process_raw/, create_main_data/, simulations/, etc.).\n\n\n\ndata\n├── base/\n├── derived/\n└── raw/\nThe data folder is broken into three root folders. The raw/ folder should be untouched data separated into sub-folders. Each sub-folder should contain a README.md with details of how the data was accessed. Once the raw data is cleaned/processed, it will output into base/. Then, combining the datasets will end up in derived/.\n\n[!TIP] If you are using large datasets that do not work with normal git commits, here’s my strategy: 1. Put the data/ folder in cloud storage and then create a symlink to this project folder (h/t Santiago Hermo)\nThis would look like ln -s ~/Dropbox/Project/data/ ~/project_path/data/. 2. Add only the large datasets to .gitignore so that you never commit them. You should document well how to download the data in raw; potentially including a script to do so.\n\n\n\n\nThis folder contains everything needed to create the paper and slides. I put figures/ and tables/ inside of out/ so that the tex files can reference them directly. This makes uploading to arXiv and submitting the paper easy since everything is in out/\nThe latex files use my templates from kylebutts/latex-templates.\nout/\n├── figures/\n├── tables/\n├── Paper.tex\n├── Paper.pdf\n├── Slides.tex\n├── Slides.pdf\n├── paper.sty\n├── slides.sty\n├── math.sty\n└── references.bib\n\n\n\nlogbook/\n├── _quarto.yml\n├── render_file.R\n└── include/\n    ├── cell-output.scss\n    ├── copy_readme.R\n    └── toggle-code.html\nThe logbook creates an quarto website with rendered output of all code used in main.R. This makes collaboration easy, as you can view all output of scripts in the logbook. Also ensures replicability. See kylebutts/repro_project for details.\nGithub actions can be setup to automatically publish logbook/ via github pages. See .github/workflows/publish_logbook.yml which updates the lobook everytime a commit is pushed. Note this does not run main.R, so logbook is only up to date if you rerun everything before committing.\n\n\n\n\nGithub has a way of marking certain commits as a “Release”: https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases - This let’s you mark a commit as a completed draft. I recommend doing a release every time you put a new version of the paper on arXiv. You have to make a tag before releasing. I put the tag as v# to match arXiv, but you can put anything"
+  },
+  {
+    "objectID": "index.html#project-setup",
+    "href": "index.html#project-setup",
+    "title": "Research Project Template",
+    "section": "",
+    "text": ".\n├── README.md\n├── .nojekyll\n└── .gitignore\nThe base directory contains a README that shows up on the front page of the Github repository. A template is included at the bottom of the readme I include links to the pdf, the abstract, .bib citation, and detail the replication process.\nThe .gitignore prevents you from comitting a lot of files that are useless (e.g. latex auxiliary files). .nojekyll is for publishing logbook/ with github pages.\n\n\n\ncode\n├── folder/\n├── utils/\n└── main.R\nAll code goes into the code/ folder. The main.R script runs all the analysis using render_file which will create logs in to the logbook/. Remember that folders are your friend (e.g. process_raw/, create_main_data/, simulations/, etc.).\n\n\n\ndata\n├── base/\n├── derived/\n└── raw/\nThe data folder is broken into three root folders. The raw/ folder should be untouched data separated into sub-folders. Each sub-folder should contain a README.md with details of how the data was accessed. Once the raw data is cleaned/processed, it will output into base/. Then, combining the datasets will end up in derived/.\n\n[!TIP] If you are using large datasets that do not work with normal git commits, here’s my strategy: 1. Put the data/ folder in cloud storage and then create a symlink to this project folder (h/t Santiago Hermo)\nThis would look like ln -s ~/Dropbox/Project/data/ ~/project_path/data/. 2. Add only the large datasets to .gitignore so that you never commit them. You should document well how to download the data in raw; potentially including a script to do so.\n\n\n\n\nThis folder contains everything needed to create the paper and slides. I put figures/ and tables/ inside of out/ so that the tex files can reference them directly. This makes uploading to arXiv and submitting the paper easy since everything is in out/\nThe latex files use my templates from kylebutts/latex-templates.\nout/\n├── figures/\n├── tables/\n├── Paper.tex\n├── Paper.pdf\n├── Slides.tex\n├── Slides.pdf\n├── paper.sty\n├── slides.sty\n├── math.sty\n└── references.bib\n\n\n\nlogbook/\n├── _quarto.yml\n├── render_file.R\n└── include/\n    ├── cell-output.scss\n    ├── copy_readme.R\n    └── toggle-code.html\nThe logbook creates an quarto website with rendered output of all code used in main.R. This makes collaboration easy, as you can view all output of scripts in the logbook. Also ensures replicability. See kylebutts/repro_project for details.\nGithub actions can be setup to automatically publish logbook/ via github pages. See .github/workflows/publish_logbook.yml which updates the lobook everytime a commit is pushed. Note this does not run main.R, so logbook is only up to date if you rerun everything before committing."
+  },
+  {
+    "objectID": "index.html#tags-and-releases",
+    "href": "index.html#tags-and-releases",
+    "title": "Research Project Template",
+    "section": "",
+    "text": "Github has a way of marking certain commits as a “Release”: https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases - This let’s you mark a commit as a completed draft. I recommend doing a release every time you put a new version of the paper on arXiv. You have to make a tag before releasing. I put the tag as v# to match arXiv, but you can put anything"
+  },
+  {
+    "objectID": "index.html#abstract",
+    "href": "index.html#abstract",
+    "title": "Research Project Template",
+    "section": "Abstract",
+    "text": "Abstract\n…"
+  },
+  {
+    "objectID": "index.html#replication",
+    "href": "index.html#replication",
+    "title": "Research Project Template",
+    "section": "Replication",
+    "text": "Replication\n…"
+  },
+  {
+    "objectID": "index.html#citation",
+    "href": "index.html#citation",
+    "title": "Research Project Template",
+    "section": "Citation",
+    "text": "Citation\n@techreport{key,\n  title={TITLE},\n  author={Butts, Kyle},\n  year={2024}\n}"
+  },
+  {
+    "objectID": "example/example/index.html",
+    "href": "example/example/index.html",
+    "title": "Main analysis script",
+    "section": "",
+    "text": "This is an example script that will be run by render_file and logged in the logbook.\nlibrary(tidyverse, warn.conflicts = FALSE)\nlibrary(fixest)",
+    "crumbs": [
+      "Example",
+      "Main analysis script"
+    ]
+  },
+  {
+    "objectID": "example/example/index.html#plots",
+    "href": "example/example/index.html#plots",
+    "title": "Main analysis script",
+    "section": "Plots",
+    "text": "Plots\n\nplot(mtcars$mpg, mtcars$hp)",
+    "crumbs": [
+      "Example",
+      "Main analysis script"
+    ]
+  },
+  {
+    "objectID": "example/example/index.html#tables",
+    "href": "example/example/index.html#tables",
+    "title": "Main analysis script",
+    "section": "Tables",
+    "text": "Tables\n\nknitr::kable(\n  mtcars[1:5, ], \n  caption = \"A knitr kable.\"\n)\n\n\nA knitr kable.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\ndrat\nwt\nqsec\nvs\nam\ngear\ncarb\n\n\n\n\nMazda RX4\n21.0\n6\n160\n110\n3.90\n2.620\n16.46\n0\n1\n4\n4\n\n\nMazda RX4 Wag\n21.0\n6\n160\n110\n3.90\n2.875\n17.02\n0\n1\n4\n4\n\n\nDatsun 710\n22.8\n4\n108\n93\n3.85\n2.320\n18.61\n1\n1\n4\n1\n\n\nHornet 4 Drive\n21.4\n6\n258\n110\n3.08\n3.215\n19.44\n1\n0\n3\n1\n\n\nHornet Sportabout\n18.7\n8\n360\n175\n3.15\n3.440\n17.02\n0\n0\n3\n2",
+    "crumbs": [
+      "Example",
+      "Main analysis script"
+    ]
+  },
+  {
+    "objectID": "example/example/index.html#regression",
+    "href": "example/example/index.html#regression",
+    "title": "Main analysis script",
+    "section": "Regression",
+    "text": "Regression\n\nest = feols(mpg ~ hp | cyl, mtcars)\nesttable(est)\n\n                             est\nDependent Var.:              mpg\n                                \nhp              -0.0240 (0.0153)\nFixed-Effects:  ----------------\ncyl                          Yes\n_______________ ________________\nS.E.: Clustered          by: cyl\nObservations                  32\nR2                       0.75386\nWithin R2                0.07998\n---\nSignif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1",
+    "crumbs": [
+      "Example",
+      "Main analysis script"
+    ]
+  }
+]
