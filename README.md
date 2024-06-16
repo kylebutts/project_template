@@ -7,8 +7,8 @@ This is a template repository that will serve as a base for research projects in
 ## Project setup
 
 ### Root
-```
-.
+``` txt
+./
 ├── README.md
 ├── .nojekyll
 └── .gitignore
@@ -21,8 +21,8 @@ The `.gitignore` prevents you from comitting a lot of files that are useless (e.
 
 
 ### Code
-```
-code
+``` txt
+code/
 ├── folder/
 ├── utils/
 └── main.R
@@ -33,8 +33,8 @@ All code goes into the `code/` folder. The `main.R` script runs all the analysis
 
 
 ### Data
-```
-data
+``` txt
+data/
 ├── base/
 ├── derived/
 └── raw/
@@ -55,7 +55,7 @@ This folder contains everything needed to create the paper and slides. I put `fi
 
 The latex files use my templates from [`kylebutts/latex-templates`](https://github.com/kylebutts/latex-templates).
 
-```
+``` txt
 out/
 ├── figures/
 ├── tables/
@@ -72,7 +72,7 @@ out/
 
 
 ### Logbook
-```
+``` txt
 logbook/
 ├── _quarto.yml
 ├── render_file.R
