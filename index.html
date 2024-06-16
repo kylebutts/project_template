@@ -190,10 +190,8 @@ ul.task-list li input[type="checkbox"] {
 ├── derived/
 └── raw/</code></pre>
 <p>The data folder is broken into three root folders. The <code>raw/</code> folder should be untouched data separated into sub-folders. Each sub-folder should contain a <code>README.md</code> with details of how the data was accessed. Once the raw data is cleaned/processed, it will output into <code>base/</code>. Then, combining the datasets will end up in <code>derived/</code>.</p>
-<blockquote class="blockquote">
-<p>[!TIP] If you are using large datasets that do not work with normal git commits, here’s my strategy: 1. Put the <code>data/</code> folder in cloud storage and then create a symlink to this project folder (h/t <a href="https://github.com/santiagohermo">Santiago Hermo</a>)</p>
+<p>If you are using large datasets that do not work with normal git commits, here’s my strategy: 1. Put the <code>data/</code> folder in cloud storage and then create a symlink to this project folder (h/t <a href="https://github.com/santiagohermo">Santiago Hermo</a>)</p>
 <p>This would look like <code>ln -s ~/Dropbox/Project/data/ ~/project_path/data/</code>. 2. Add <em>only</em> the large datasets to <code>.gitignore</code> so that you never commit them. You should document well how to download the data in <code>raw</code>; potentially including a script to do so.</p>
-</blockquote>
 </section>
 <section id="out" class="level3">
 <h3 class="anchored" data-anchor-id="out">Out</h3>
